@@ -285,11 +285,226 @@ body {
         background-color: darken(@water-4, 10);
       }
       &-top {
+        opacity: 0.75;
+        background-image: linear-gradient(
+          to right,
+          @water-1 0,
+          @water-1 5%,
+          @water-2 20%,
+          @water-2 30%,
+          @water-1 40%,
+          @water-1 65%,
+          darken(@water-1, 3) 70%,
+          darken(@water-1, 3) 72%,
+          @water-1 85%
+        );
+
+        box-shadow: inset 0.5em 0.5em 2em rgba(@white-1, 0.5);
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 40%;
+          height: 100%;
+          overflow: hidden;
+          background-image: linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 10%,
+            rgba(@water-2, 0.9) 15%,
+            rgba(@water-2, 0.9) 40%,
+            rgba(@white-1, 0.2) 40%,
+            rgba(@white-1, 0.2) 50%,
+            transparent 60%
+          );
+          filter: blur(0.15em);
+        }
       }
       &-bottom {
+        background-color: @water-3;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          box-shadow: -0.25em 0.25em 1em @water-4;
+        }
       }
     }
     // 玻璃地板结束
+
+    // 客厅的地板主区域右侧1开始
+    .floorMainRight1 {
+      width: 17rem;
+      height: 20.5rem;
+      right: 6rem;
+      top: 0;
+      position: absolute;
+      transform: translateZ(0.41rem);
+      .cube(17rem, 0.5rem, 22rem,#fff);
+      &-front {
+        background-image: linear-gradient(
+          to right,
+          darken(@white-3, 10),
+          @white-3
+        );
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-3;
+      }
+      &-top {
+        background-image: linear-gradient(
+          135deg,
+          darken(@white-3, 10) 60%,
+          @white-2
+        );
+      }
+      &-bottom {
+        background-color: @white-3;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 101%;
+          background-color: @white-4;
+          filter: blur(0.35rem);
+        }
+      }
+    }
+    // 客厅的地板主区域右侧1结束
+
+    // 客厅的地板主区域右侧2开始
+    .floorMainRight2 {
+      width: 16rem;
+      height: 21rem;
+      border: 10px dashed blue;
+      background-color: blue;
+      right: 6rem;
+      top: 0;
+      transform: translateZ(0.92rem);
+      .cube(16rem,0.5rem,21rem,#fff);
+      &-front {
+        background-image: linear-gradient(
+          to right,
+          darken(@white-3, 10),
+          @white-3
+        );
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-3;
+      }
+      &-top {
+        background-image: linear-gradient(
+          135deg,
+          darken(@white-3, 10) 60%,
+          @white-2
+        );
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 16.4rem;
+          background-color: lighten(@bg-1, 5);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 1.5rem;
+          left: 1rem;
+          width: 10rem;
+          height: 3.5rem;
+          border-radius: 50%;
+          background-image: radial-gradient(@light-2, transparent);
+          filter: blur(0.5rem);
+        }
+      }
+      &-bottom {
+        background-color: @white-3;
+        // 前侧底部阴影
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 101%;
+          background-color: @white-4;
+          filter: blur(0.35rem);
+        }
+      }
+    }
+    // 客厅的地板主区域右侧2结束
+
+    // 地板主区域左侧1开始
+    .floorMainLeft1 {
+      width: 13rem;
+      height: 17rem;
+      border: 10px dashed blue;
+      left: 0;
+      top: 0;
+      transform: translateZ(0.41rem);
+      .cube(13.1rem, 0.5rem ,17rem, transparent);
+      &-front {
+        background-image: linear-gradient(
+          to right,
+          darken(@white-3, 30),
+          darken(@white-3, 10)
+        );
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-1;
+      }
+      &-top {
+        background-color: lighten(@bg-1, 5);
+        &::before {
+          content: "";
+          position: absolute;
+          top: 2rem;
+          left: 3.5rem;
+          width: 12rem;
+          height: 12rem;
+          border-radius: 50%;
+          background-color: rgba(@light-1, 0.35);
+          filter: blur(0.95rem);
+        }
+      }
+      &-bottom {
+        background-color: @white-3;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 102%;
+          background-color: darken(@white-3, 20);
+          box-shadow: 0 0.25rem 1rem darken(@white-3, 20);
+        }
+      }
+    }
+    // 地板主区域左侧1结束
   }
   // 房屋结束
 }
