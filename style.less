@@ -505,6 +505,122 @@ body {
       }
     }
     // 地板主区域左侧1结束
+
+    // 地板右上角1开始
+    .floorRightUp1 {
+      width: 4rem;
+      height: 4rem;
+      right: 2rem;
+      top: 0;
+      transform: translateZ(0.41rem);
+      .cube(4rem,1.1rem,4rem, transparent);
+      &-front {
+        background-image: linear-gradient(
+          to top,
+          darken(@white-3, 15) 50%,
+          lighten(@white-3, 2)
+        );
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-1;
+      }
+      &-top {
+        background-color: darken(@white-2, 5);
+      }
+      &-bottom {
+        background-color: @white-3;
+      }
+    }
+    // 地板右上角1结束
+
+    // 地板右下角1开始
+    .floorRightDown1 {
+      width: 6rem;
+      height: 6rem;
+      right: 0;
+      bottom: 2rem;
+      transform: translateZ(0.41rem);
+      .cube(6rem,0.5rem,6rem, transparent);
+      &-front {
+        background-color: @white-3;
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-1;
+      }
+      &-top {
+        background-color: darken(@white-1, 2);
+      }
+      &-bottom {
+        background-color: @white-1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 95%;
+          height: 104%;
+          background-color: @white-4;
+          filter: blur(0.35rem);
+        }
+      }
+    }
+    // 地板右下角1结束
+
+    // 地板右下角2开始
+    .floorRightDown2 {
+      width: 4rem;
+      height: 5rem;
+      right: 2rem;
+      bottom: 3rem;
+      transform: translateZ(0.92rem);
+      .cube(4rem,0.5rem,5rem, transparent);
+      &-front {
+        background-color: @white-3;
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-2;
+      }
+      &-left {
+        background-color: @white-1;
+      }
+      &-top {
+        background-color: darken(@white-2, 2);
+      }
+      &-bottom {
+        background-color: @white-1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 95%;
+          height: 104%;
+          background-color: @white-4;
+          filter: blur(0.5rem);
+        }
+      }
+    }
+    // 地板右下角2结束
+
+    // 小桌子开始
+    .table {
+    }
+    // 小桌子结束
   }
   // 房屋结束
 }
