@@ -619,6 +619,16 @@ body {
 
     // 小桌子开始
     .table {
+      width: 3rem;
+      height: 5rem;
+      .cube(3rem,0.25rem,5rem, transparent);
+      right: 10.5rem;
+      bottom: 13rem;
+      position: absolute;
+      transform: translateZ(2.25rem);
+      &-front {
+        background-color: lighten(@white-3, 3);
+      }
     }
     // 小桌子结束
   }
