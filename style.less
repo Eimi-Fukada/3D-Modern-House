@@ -698,6 +698,46 @@ body {
       }
     }
     // 小桌子结束
+
+    // 座椅1开始
+    .couch1 {
+      width: 5rem;
+      height: 2rem;
+      .cube(5rem,2rem,3rem,transparent);
+      position: absolute;
+      top: 0.5rem;
+      left: 16rem;
+      transform: translateZ(1.5rem);
+      &-front {
+        background-color: lighten(@white-3, 6);
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-1;
+      }
+      &-left {
+        background-color: @white-3;
+      }
+      &-top {
+        background-color: darken(@white-2, 3);
+      }
+      &-bottom {
+        background-color: @white-3;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -10%;
+          top: -10%;
+          width: 120%;
+          height: 120%;
+          background-color: rgba(darken(@white-3, 10), 0.5);
+          filter: blur(0.25rem);
+        }
+      }
+    }
+    // 座椅1结束
   }
   // 房屋结束
 }
