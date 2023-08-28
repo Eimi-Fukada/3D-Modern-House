@@ -738,6 +738,93 @@ body {
       }
     }
     // 座椅1结束
+
+    // 座椅2开始
+    .couch2 {
+      width: 7rem;
+      height: 0.75rem;
+      .cube(7rem,0.75rem,5rem,transparent);
+      position: absolute;
+      bottom: 17rem;
+      left: 6rem;
+      transform: translateZ(1rem);
+      &-front {
+        background-color: lighten(@white-3, 6);
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-1;
+      }
+      &-left {
+        background-color: @white-3;
+      }
+      &-top {
+        background-image: linear-gradient(
+          to right,
+          lighten(@light-1, 3),
+          lighten(@light-1, 5),
+          60%
+        );
+      }
+      &-bottom {
+        background-color: @white-3;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -10%;
+          top: -10%;
+          width: 120%;
+          height: 120%;
+          background-color: rgba(darken(@white-3, 10), 0.5);
+          filter: blur(0.25rem);
+        }
+      }
+    }
+    // 座椅2结束
+
+    // 后墙开始
+    .backWall {
+      width: 8rem;
+      height: 11rem;
+      .cube(8rem, 11rem, 1rem, transparent);
+      position: absolute;
+      left: 14rem;
+      top: 0;
+      transform: translateZ(1.5rem);
+      &-front {
+        background-color: @white-2;
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-color: @white-1;
+      }
+      &-left {
+        background-color: @white-2;
+      }
+      &-top {
+        background-color: @white-2;
+      }
+      &-bottom {
+        background-color: @white-3;
+      }
+    }
+    // 后墙结束
+
+    // 左墙开始
+    .leftWall {
+      width: 3.5rem;
+      height: 12rem;
+      .cube(3.5rem, 12rem ,19rem, transparent);
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateZ(0.41rem);
+    }
+    // 左墙结束
   }
   // 房屋结束
 }
