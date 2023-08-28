@@ -823,6 +823,95 @@ body {
       left: 0;
       top: 0;
       transform: translateZ(0.41rem);
+      &-front {
+        display: flex;
+        justify-self: center;
+        background-image: linear-gradient(
+          to bottom,
+          @white-3,
+          darken(@white-3, 15)
+        );
+        overflow: hidden;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -1.1rem;
+          width: 200%;
+          height: 3rem;
+          background-image: linear-gradient(
+            to right,
+            rgba(@light-1, 0.3),
+            rgba(@white-3, 0.25)
+          );
+          filter: blur(0.175rem);
+          transform: translateZ(-30deg);
+        }
+      }
+      &-back {
+        background-color: @white-3;
+      }
+      &-right {
+        background-image: linear-gradient(
+          to top,
+          darken(@white-3, 10),
+          darken(@white-3, 20),
+          lighten(@light-2, 5) 70%
+        );
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: calc(100% - 2.5rem);
+          height: 100%;
+          background-image: linear-gradient(
+            to bottom,
+            @white-1,
+            lighten(@light-2, 5) 15%,
+            darken(@white-2, 10) 80%,
+            darken(@white-3, 10)
+          );
+          filter: blur(0.5rem);
+        }
+      }
+      &-left {
+        background-image: linear-gradient(
+          to top,
+          darken(@white-3, 20),
+          darken(@white-3, 30)
+        );
+      }
+      &-top {
+        background-color: darken(@white-3, 5);
+      }
+      &-bottom {
+        background-color: @white-3;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 115%;
+          height: 103%;
+          background-color: rgba(@white-4, 0.75);
+          filter: blur(0.5rem);
+        }
+      }
+      .lamp {
+        position: absolute;
+        top: 7.5rem;
+        left: 1.2rem;
+        width: 0.75rem;
+        height: 2.5rem;
+        border-radius: 5rem;
+        opacity: 0.95;
+        background-color: @light-1;
+        box-shadow: 0.15rem 0.15rem 0.75rem rgba(@light-2, 0.5),
+          0.15rem -0.15rem 0.75rem rgba(@light-2, 0.5),
+          -0.15rem 0.15rem 0.75rem rgba(@light-2, 0.5),
+          -0.15rem -0.15rem 0.75rem rgba(@light-2, 0.5);
+        filter: blur(0.15rem);
+      }
     }
     // 左墙结束
   }
